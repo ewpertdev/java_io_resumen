@@ -8,7 +8,7 @@ class CrearDirectorioConClase {
         // que se encuentra dentro del proyecto
         File testing = new File(".\\testing\\");
         try {
-            if(testing.mkdirs()) {
+            if (testing.mkdirs()) {
                 System.out.println("Directorio creado");
             } else
                 System.out.println("Directorio no ha sido creado porque ya existe");

@@ -3,13 +3,12 @@ package Crear_fichero;
 import java.io.*;
 
 class CrearFicheroConClase {
-    public static void main(String[]args){
+    public static void main(String[] args) {
         File testing = new File("testing.txt");
 
         try {
-            if(testing.createNewFile()) {
+            if (testing.createNewFile()) {
                 System.out.println("Fichero creado: " + testing.getName());
-
 
             } else {
                 System.out.println("Fichero no creado porque ya existe");
