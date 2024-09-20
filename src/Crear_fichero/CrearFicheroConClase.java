@@ -9,12 +9,15 @@ class CrearFicheroConClase {
         try {
             if(testing.createNewFile()) {
                 System.out.println("Fichero creado: " + testing.getName());
+
+
             } else {
                 System.out.println("Fichero no creado porque ya existe");
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("File's length: " + testing.length());
 
 
     }
