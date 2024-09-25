@@ -28,9 +28,9 @@ public class LeerFichero {
             PrintWriter pw = new PrintWriter(fichero);
 
             for(int i=0; i<10;i++) {
-                pw.print(i);
+                pw.write("numero \n"+"\n"+i);
             }
-
+            fichero.close();
         } catch(Exception e) {
             e.getStackTrace();
         }
