@@ -60,7 +60,6 @@ public class LeerFichero {
         String ruta = "Fichero.txt";
         File fichero = new File(ruta);
 
-
         if (fichero.exists()) {
             System.out.println("Leyendo..");
             // Llamamos a la función de lectura
