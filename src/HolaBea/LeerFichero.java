@@ -21,6 +21,22 @@ public class LeerFichero {
             e.getStackTrace();
         }
     }
+
+    public static void Escritura (String ruta){
+        try{
+            FileWriter fichero = new FileWriter(ruta);
+            PrintWriter pw = new PrintWriter(fichero);
+
+            for(int i=0; i<10;i++) {
+                pw.print(i);
+            }
+
+        } catch(Exception e) {
+            e.getStackTrace();
+        }
+
+
+    }
             public static void main (String[]args){
                 // String ruta="\"";
                 String ruta = "Fichero.txt";
@@ -32,6 +48,7 @@ public class LeerFichero {
                     // Llamamos a la función de lectura
 //                    Lectura(fichero);
                     LecturaBuffer(fichero);
+                    Escritura(ruta);
 
                 } else {
                     System.out.println("no existe el fichero" + fichero.getAbsolutePath());
