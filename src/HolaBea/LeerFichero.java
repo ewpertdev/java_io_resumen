@@ -1,16 +1,22 @@
 package HolaBea;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class LeerFichero {
-    public static void Lectura(File fichero) {
-        char[] texto = new char[100];
+    public static void LecturaBuffer(File fichero) {
         try {
             FileReader salida = new FileReader(fichero);
-            System.out.println("La codificación es: " + salida.getEncoding());
-            System.out.println("La salida es: " + salida.read());
+            BufferedReader buffer = new BufferedReader(salida);
+            String texto="";
+
+//            while((texto=buffer.readLine()!=null)){
+//                System.out.println(texto);
+//            }
+            while(texto!=null){
+                texto=buffer.readLine();
+                System.out.println(texto);
+            }
+
         } catch (Exception e) {
             e.getStackTrace();
         }
@@ -24,7 +30,8 @@ public class LeerFichero {
                 if (fichero.exists()) {
                     System.out.println("Leyendo..");
                     // Llamamos a la función de lectura
-                    Lectura(fichero);
+//                    Lectura(fichero);
+                    LecturaBuffer(fichero);
 
                 } else {
                     System.out.println("no existe el fichero" + fichero.getAbsolutePath());
